@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-16T19:49:07.129Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="40eqgPCF6bkjAasg6eWM" version="20.2.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-08-16T21:14:49.370Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="mYfjMoANBNJbqNmkbz9c" version="20.2.4" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="1038" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -120,6 +120,21 @@
               <mxPoint x="820" y="310" />
               <mxPoint x="830" y="370" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l3-UN73fotlagrPcZMCU-22" value="Vendedor" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="290" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="l3-UN73fotlagrPcZMCU-23" value="VendedorId" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="l3-UN73fotlagrPcZMCU-22">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l3-UN73fotlagrPcZMCU-25" value="ClienteId&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="l3-UN73fotlagrPcZMCU-22">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l3-UN73fotlagrPcZMCU-31" value="" style="endArrow=classic;startArrow=ERmany;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;startFill=0;" edge="1" parent="1" source="l3-UN73fotlagrPcZMCU-23" target="C-vyLk0tnHw3VtMMgP7b-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="230" as="sourcePoint" />
+            <mxPoint x="450" y="180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
