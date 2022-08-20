@@ -15,7 +15,7 @@ function TestCampos() {
         showAlert()
     } 
     else {
-          location.href = "index.html"; 
+          location.href = "main.html"; 
         }
 }
 
