@@ -1,18 +1,18 @@
 
 const pError = document.getElementById("pError");
 
-function showAlertError() {
-    pError.innerHTML =  ` <div role="alert">
+function showAlert() {
+    pError.innerHTML =  ` <divrole="alert">
     <p>Alguno de los campos está vacío, porfavor completalo</p>
     </div> `
 }
 
-function Validar_Campos() {
+function TestCampos() {
 
     let email = document.getElementById("email");
-    let passwordContainer = document.getElementById("password");
+    let passwordContainer = document.getElementById("passwordContainer");
     if ((email.value.length === 0) || (passwordContainer.value.length === 0)) {
-        showAlertError()
+        showAlert()
     } 
     else {
           location.href = "index.html"; 
@@ -22,9 +22,9 @@ function Validar_Campos() {
 
 
 
-let ButtonIngr = document.getElementById("botonIngresar");
+let ButtonIngr = document.getElementById("buttonIngr");
 ButtonIngr.addEventListener("click",function(){
-    Validar_Campos()
+    TestCampos();
 })
 
 

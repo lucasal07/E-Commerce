@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-#botonIngresar {
+#buttonIngr {
   background-color:#0D6EFD;
   border-color: #0D6EFD;
   color: white;
@@ -34,8 +34,7 @@
 
 <body>
   <main class="mt-5">
-    <div class="container">
-      <form id="form">
+    <div id="form" class="container">
         <div id="login" alt="login" class = "">
           <img src ="img\login.png" id="ImgLogin" >
           <p id="pError"> </p>  
@@ -45,13 +44,12 @@
         <input id="email" type="email" placeholder="Introduce tu email" required>
         <br>
         <br>
-        <label for="password">Contraseña</label>
+        <label for="passwordContainer">Contraseña</label>
         <br>
-        <input id="password" type="password" placeholder="Introduce tu contraseña" name="password" required>
+        <input id="passwordContainer" type="password" placeholder="Introduce tu contraseña" name="password" required>
         <br>
         <br>
-        <input id="botonIngresar"  type ="submit" value="Ingresar">
-    </form>  
+        <input id="buttonIngr"  type ="submit" value="Ingresar">
     </div>
   </main>
   <footer class="text-muted">
