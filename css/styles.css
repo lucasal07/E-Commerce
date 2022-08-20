@@ -188,3 +188,11 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+h4 {
+  text-align: center;
+}
+#verProductos {
+  text-align: center;
+}
+
