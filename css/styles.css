@@ -101,7 +101,6 @@ footer p {
   width: 50%;
   left: 50%;
   transform: translate(-50%, 0);
-  color: red;
 }
 
 .lds-ring {
@@ -196,3 +195,4 @@ h4 {
 #verProductos {
   text-align: center;
 }
+
