@@ -50,30 +50,9 @@ function onSignIn(googleUser) {
       location.href ="index.html";
     });
   }
-
-// function Validar_Campos() {
-
-//     var email = document.getElementById("email").value;
-//     var password = document.getElementById("password").value;
-//     if ((email.length == 0) || (password.length === 0)) {
-//         console.log("los campos son 0");
-//     } 
-//     else {
-//         if (password.length <= 6) {
-//             showAlertError();
-//             console.log("La contraseña tiene menos de 6 caracteres");
-//         } else {
-//                 alert("podes ir al index");
-//                     boton.addEventListener("click", function(){
-//                         location.href="index.html"
-//                     });
-
-//             }
-//     }
-// }  
-
-// document.addEventListener("click",function(){
-
-//     this.location.href="index.html"
-//   })
+  let email = document.getElementById("email");
+  ButtonIngr.addEventListener("click", (evt) => {
+    if (email.value) localStorage.setItem("text", email.value);
+  });
+  
 
