@@ -40,3 +40,16 @@ let getJSONData = function(url){
     });
 }
 
+let storage = localStorage.getItem("text");    //traigo lo que haya guardado en el LocalStorage
+console.log(storage);  //Lo muestro en la consola
+
+let data = document.getElementById("data");
+
+function addText(){
+    data.innerHTML = `<p class="nav-link active">` + storage + `</p>` ;
+}
+
+addEventListener("DOMContentLoaded",function(){
+    addText();
+});
+

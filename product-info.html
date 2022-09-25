@@ -30,7 +30,7 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
+          <li id="data" class="nav-item">
           </li>
         </ul>
       </div>
@@ -38,9 +38,27 @@
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+     <div id="producto-info"> <!-- Acá va toda la información correspondiente al producto -->    </div>
+     <div id="producto-img"><h5><b>Imágenes Ilustrativas</b></h5><!-- acá van las imágenes correspondientes a cada producto --></div>
+     <br>
+     <div id="comments"><h5><b>Comentarios</b></h5><!-- acá agrego los comentarios traidos de la url --></div>
+     <lable for="comment">Tu opinión:</lable>
+     <br>
+     <textarea id="comment" type="text" placeholder="Ingrese aquí su comentario" size="40"></textarea>
+     <br>
+     <br>
+     <label for="score">Tu puntuación:</label>
+     <br>
+     <select name="score" id="score" style="width: 100px;">
+      <option value = "1">1</option>
+      <option value = "2">2</option>
+      <option value = "3">3</option>
+      <option value = "4">4</option>
+      <option value = "5">5</option>
+     </select>
+     <br>
+     <br>
+     <input id="sendComment" class="buttonIngr " type ="submit" value="Enviar">
     </div>
   </main>
   <footer class="text-muted">
