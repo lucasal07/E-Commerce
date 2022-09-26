@@ -4,6 +4,7 @@ let catid = localStorage.getItem("catID");
 
 let URL_info= "https://japceibal.github.io/emercado-api/products/"+  ProductsId + ".json";
 let url_comments = "https://japceibal.github.io/emercado-api/products_comments/" +  ProductsId  + ".json"
+let sendComment = document.getElementById("sendComment");
 
 let productArray = [];
 let commentsArray = [];
@@ -80,8 +81,7 @@ function showComments(array){
         htmlContentToAppend += `
         <div class="list-group-item list-group-item-action cursor-active">
         <h6><b>${comments.user}</b>/${comments.dateTime}   ${showScoreStars(comments.score)}</h6>
-
-         <h7>${comments.description}</h7>  
+        <h6>${comments.description}</h6>  
         <br> 
         </div>
          `
@@ -90,8 +90,25 @@ function showComments(array){
     verComentarios.innerHTML += htmlContentToAppend;
 }
 
+function addComment() {
+    let newComment = document.getElementById("comment").value;//OBTENGO EL NUEVO COMENTARIO
+    let newScore = document.getElementById("score").value;//OBTENGO LA NUEVA PUNTUACIÓN
+    let getUser = localStorage.getItem("text");//TRAIGO EL USUARIO DEL LOCALSTORAGE
+    let date = new Date();
+    let htmlContentToAppend = "";
+    htmlContentToAppend += `
+        <div class="list-group-item list-group-item-action cursor-active">
+        <h6><b>${getUser}</b>/${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}  ${showScoreStars(newScore)}</h6>
+         <h7>${newComment}</h7>  
+        <br> 
+        </div>
+         `;
+         verComentarios.innerHTML += htmlContentToAppend;
+}
 
-let newComment = document.getElementById("comment").value;//OBTENGO EL NUEVO COMENTARIO
-let newScore = document.getElementById("score").value;//OBTENGO LA NUEVA PUNTUACIÓN
+
+sendComment.addEventListener("click",function(){
+    addComment()
+});
 
 

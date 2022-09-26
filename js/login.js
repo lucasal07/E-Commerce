@@ -52,7 +52,7 @@ function onSignIn(googleUser) {
   }
   let email = document.getElementById("email");
   ButtonIngr.addEventListener("click", (evt) => {
-    if (email.value) localStorage.setItem("text", email.value);
+    if (email.value) localStorage.setItem("user", email.value);
   });
   
 
