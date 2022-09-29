@@ -1,4 +1,4 @@
-let ProductsId = localStorage.getItem("products.id");    //traigo el id de el producto que seleccioné
+let ProductsId = localStorage.getItem("products.id");//traigo el id de el producto que seleccioné
 console.log(ProductsId);//lo muestro en la consola
 let catid = localStorage.getItem("catID");
 
@@ -90,7 +90,8 @@ function showComments(array){
     verComentarios.innerHTML += htmlContentToAppend;
 }
 
-function addComment() {
+
+function addComment() { //FUNCIÓN PARA AGREGAR UN NUEVO COMENTARIO
     let newComment = document.getElementById("comment").value;//OBTENGO EL NUEVO COMENTARIO
     let newScore = document.getElementById("score").value;//OBTENGO LA NUEVA PUNTUACIÓN
     let getUser = localStorage.getItem("text");//TRAIGO EL USUARIO DEL LOCALSTORAGE
@@ -109,6 +110,6 @@ function addComment() {
 
 sendComment.addEventListener("click",function(){
     addComment()
-});
+}); //utilizo este evento para agregar el comentario
 
 
