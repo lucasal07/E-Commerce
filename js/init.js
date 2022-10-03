@@ -7,6 +7,10 @@ const CART_INFO_URL = "https://japceibal.github.io/emercado-api/user_cart/";
 const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
 const EXT_TYPE = ".json";
 
+let storage = localStorage.getItem("user");    //traigo lo que haya guardado en el LocalStorage
+console.log(storage);  //Lo muestro en la consola
+let data = document.getElementById("data");
+
 let showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
 }
@@ -40,16 +44,34 @@ let getJSONData = function(url){
     });
 }
 
-let storage = localStorage.getItem("text");    //traigo lo que haya guardado en el LocalStorage
-console.log(storage);  //Lo muestro en la consola
 
-let data = document.getElementById("data");
 
-function addText(){
+function removeLocalStorage(){
+  localStorage.clear()
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+let htmlContentToAppend = "";
+htmlContentToAppend +=
+            `<div class="dropdown">
+<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+  <li id="data" class="nav-item">${storage}</li> 
+</a>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+  <li><a class="dropdown-item" href="my-profile.html">Mi Perfil</a></li>
+  <li ><a onclick="removeLocalStorage()" class="dropdown-item" href="index.html" >Cerrar Sesión</a></li>
+</ul>
+</div>`;
+data.innerHTML = htmlContentToAppend;
+
+})
+
+/* function addText(){
     data.innerHTML = `<p class="nav-link active">` + storage + `</p>` ;
 }
 
 addEventListener("DOMContentLoaded",function(){
     addText();
 });
-
+ */

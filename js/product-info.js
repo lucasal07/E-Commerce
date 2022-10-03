@@ -12,6 +12,7 @@ let commentsArray = [];
 const verProductInfo = document.getElementById("producto-info");//AGREGO LA INFO DEL PRODUCTO
 const verComentarios = document.getElementById("comments");//DONDE AGREGO LOS COMENTARIOS
 const verImagenes  = document.getElementById("producto-img"); //DONDE AGREGO LAS IMÁGENES
+const relatedImages = document.getElementById("relatedImages");//ACÁ ES DONDE QUIERO MOSTRAR LAS IMÁGENES RELACIONADAS
 
 document.addEventListener("DOMContentLoaded", function(){
     getJSONData(URL_info).then(function(resultObj){
@@ -20,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function(){
             productArray = array;
             showProduct(productArray);
             showProductImg(productArray.images);
+            ShowRelatedImages(productArray.relatedProducts)
+            /* console.log(productArray.relatedProducts); */
         }
     })
 
@@ -27,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if (resultObj.status=='ok'){
             array = resultObj.data;
             commentsArray = array;
-            console.log(commentsArray);
+/*             console.log(commentsArray); */
             showComments(commentsArray);
 
         }
@@ -56,6 +59,21 @@ function showProduct(array) {
         </div>`
     verProductInfo.innerHTML = htmlContentToAppend;
 }
+
+
+
+function ShowRelatedImages(array){
+    let htmlContentToAppend = "";
+    for(let relatedImage of array){
+        htmlContentToAppend += `
+        <div>
+            <h6>${relatedImage.name}</h6>
+            <img src="${relatedImage.image}" class="ImgRelated">
+        </div>`
+    }
+    relatedImages.innerHTML += htmlContentToAppend;
+}
+
 
 function showProductImg(array){
     let htmlContentToAppend = "";
@@ -112,4 +130,21 @@ sendComment.addEventListener("click",function(){
     addComment()
 }); //utilizo este evento para agregar el comentario
 
+/* function ShowRelatedImages(array){
+    let htmlContentToAppend1 = "";
+    let htmlContentToAppend2 = "";
 
+    for(var i = 0;i < array.length;i++) {
+        htmlContentToAppend1 = `
+            <div class="carousel-item active">
+            <img src="${array[0].image}" class="d-block w-100">`
+    ;};
+    
+    for(var j = 1;j < array.length; j++) {
+        htmlContentToAppend2 += `
+        <div class="carousel-item">
+        <img src="${array[1].image}" class="d-block w-100">
+        </div>`
+    };
+    relatedImages.innerHTML += htmlContentToAppend1 + htmlContentToAppend2;
+} */

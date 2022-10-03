@@ -206,3 +206,13 @@ h4 {
   color: white;
   border-radius: 4px;
 }
+
+#dropdownMenuLink {
+  height: 50px;
+}
+
+.ImgRelated {
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+}
