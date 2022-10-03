@@ -54,7 +54,7 @@ function ShowProductos(array) { //Función para mostrar los datos obtenidos de l
                     </div>
                     <div class="col">
                         <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">${productos.name}</h4>
+                            <h4 class="mb-1">${productos.name}-${productos.currency} ${productos.cost}</h4>
                             <small class="text-muted">${productos.soldCount} artículos vendidos</small>
                         </div>
                         <p class="mb-1">${productos.description}</p>
