@@ -216,3 +216,30 @@ h4 {
   height: 200px;
   border-radius: 10px;
 }
+
+.title {
+  text-align: center;
+}
+
+.ImgCart {
+  height: 50px;
+}
+
+.InputCtd{
+  width: 50px;
+  border-radius: 5px;
+} 
+
+.Distancia{
+  padding: 20px;
+}
+
+.Inputenvio {
+  width: 250px;
+  height: 35px;
+}
+
+.DivBuyProducto {
+  border-color: black;
+  border-radius: 5px;
+}
