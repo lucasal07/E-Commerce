@@ -6,14 +6,12 @@ document.addEventListener("DOMContentLoaded", function(){
     getJSONData(Url_cart).then(function(resultObj){
         if (resultObj.status=='ok'){
             CartObj = resultObj.data;
-            console.log(CartObj.articles);
             ShowCart(CartObj.articles);
         }
     })
 });
 function ShowCart(array) {
     let htmlContentToAppend = "";
-
     for(let carts of array){
     htmlContentToAppend += `<div class="container title">
             <table>
@@ -30,9 +28,9 @@ function ShowCart(array) {
                     <td class="Distancia">${carts.name}</td>
                     <td class="Distancia">${carts.currency}${carts.unitCost}</td>
                     <td class="Distancia">
-                        <input id="ctd" type="number" class="InputCtd" >
+                        <input id="ctd" oninput="ChangeSubTotal(${carts.unitCost})" type="number" class="InputCtd" >
                     </td>
-                    <td class="Distancia"><b>${carts.currency}${carts.unitCost}</b></td>
+                    <td class="Distancia"><b><p>${carts.currency}<span id="resultado">${carts.unitCost}</p></b></td>
                     <div>
                 </tr>
             </table>
@@ -44,10 +42,8 @@ function ShowCart(array) {
 
 
 function ChangeSubTotal(precio){
-    let ctd = document.getElementsById("ctd").value;
-    console.log(ctd)
-    let Subtotal = ctd*precio;
-
-    return(Subtotal)
+    let ctd = document.getElementById("ctd").value 
+    resultado = precio*ctd
+    return document.getElementById("resultado").innerHTML = resultado
 } 
 
