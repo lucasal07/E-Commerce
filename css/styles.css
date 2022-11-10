@@ -243,3 +243,22 @@ h4 {
   border-color: black;
   border-radius: 5px;
 }
+
+.inputFormPago {
+
+}
+#costo {
+  margin-left: 60%;
+}
+
+#envioValor {
+  margin-left: 71%;
+}
+
+#Total {
+  margin-left: 84%;
+}
+
+.SubResult {
+  
+}

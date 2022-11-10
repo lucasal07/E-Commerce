@@ -82,8 +82,69 @@
           </tr>
     </form>
     <hr>
+      <h3>Costos</h3>
+      <div id="costos">
+      </div>
+      <hr>
+      <h3>Formas de pago</h3>
+      <div id="formasPago" class="d-flex">
+      <p>No ha seleccionado ninguna forma de pago</p>
+      <button type="button" class="btn btn-outline-primary" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Seleccionar
+      </button>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Fromas de Pago</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <input type="radio" id="tarjeta" name="pago"> Tarjeta de Crédito
+              <hr>
+              <form>
+                <tr>
+                  <td>
+                    <label for="nroTajeta">Número de Tarjeta</label>
+                    <input id="nroTajeta" class="inputFormPago"  type="text" placeholder="Ingrese su nro de tarjeta" maxlength="16">
+                  </td>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <td>
+                      <label for="codSeg">Código de seg.</label> 
+                    <input id="codSeg" type="text" placeholder="Ingrese el número" maxlength="3">  
+                    </td>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                  <td>
+                    <label for="vencimiento">Vencimiento(MM/AA)</label>
+                    <input id="vencimiento" type="text" placeholder="(MM/AA)" maxlength="5">
+                  </td>
+                </tr>
+              </form>
+              <br>
+              <input type="radio" id="bancaria" name="pago"> Transferencia bancaria
+              <hr>
+              <label for="cuenta">Número de Cuenta</label>
+              <input id="cuenta" type="text"  maxlength="9">
 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          
+          </div>
+        </div>
+      </div>
     </div>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg btn-block">Finalizar Compra</button>
+  </div>
+
   </main>
   <footer class="text-muted">
     <div class="container">
